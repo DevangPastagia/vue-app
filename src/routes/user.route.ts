@@ -22,7 +22,7 @@ export const AppRoutes: AppRoutesType = {
   // Common pages
   common: {
     path: "/",
-    component: () => import("@layouts/Main.vue"),
+    component: () => import("@layouts/main.vue"),
     children: {
       Home: {
         path: "",
@@ -30,6 +30,7 @@ export const AppRoutes: AppRoutesType = {
         component: () => import("@views/home/index.vue"),
         meta: {
           isAuthRequired: false,
+          requiredPermissions: ["some", "permission"],
         },
       },
     },
@@ -38,7 +39,7 @@ export const AppRoutes: AppRoutesType = {
   // User pages
   User: {
     path: "/users",
-    component: () => import("@layouts/Main.vue"),
+    component: () => import("@layouts/main.vue"),
     children: {
       Users: {
         path: "",
@@ -46,6 +47,7 @@ export const AppRoutes: AppRoutesType = {
         component: () => import("@views/users/list/index.vue"),
         meta: {
           isAuthRequired: true,
+          requiredPermissions: ["some", "permission"],
         },
       },
       User: {
@@ -54,6 +56,7 @@ export const AppRoutes: AppRoutesType = {
         component: () => import("@views/users/detail/index.vue"),
         meta: {
           isAuthRequired: true,
+          requiredPermissions: ["some", "permission"],
         },
       },
       PageNotFound: {
@@ -69,7 +72,7 @@ export const AppRoutes: AppRoutesType = {
 
   Profile: {
     path: "/profile",
-    component: () => import("@layouts/Main.vue"),
+    component: () => import("@layouts/main.vue"),
     children: {
       Users: {
         path: "",
@@ -77,6 +80,7 @@ export const AppRoutes: AppRoutesType = {
         component: () => import("@views/profile/index.vue"),
         meta: {
           isAuthRequired: true,
+          requiredPermissions: ["some", "permission"],
         },
       },
     },

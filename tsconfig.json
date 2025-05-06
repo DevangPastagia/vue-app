@@ -16,6 +16,7 @@
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
       "@views/*": ["./src/views/*"],
       "@store/*": ["./src/store/*"],
       "@routes/*": ["./src/routes/*"],

@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import path from "path";
+import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
 import vuetify from "vite-plugin-vuetify";
 
@@ -52,17 +52,18 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      // "@assets": path.resolve(__dirname, "./src/assets"),
-      // "@components": path.resolve(__dirname, "./src/components"),
-      // "@views": path.resolve(__dirname, "./src/views"),
-      // "@store": path.resolve(__dirname, "./src/store"),
-      // "@router": path.resolve(__dirname, "./src/router"),
-      // "@utils": path.resolve(__dirname, "./src/utils"),
-      // "@api": path.resolve(__dirname, "./src/api"),
-      // "@mixins": path.resolve(__dirname, "./src/mixins"),
-      // "@plugins": path.resolve(__dirname, "./src/plugins"),
-      // "@styles": path.resolve(__dirname, "./src/styles"),
+      "@": resolve(__dirname, "./src"),
+      "@assets": resolve(__dirname, "./src/assets"),
+      "@components": resolve(__dirname, "./src/components"),
+      "@layouts": resolve(__dirname, "./src/layouts"),
+      "@views": resolve(__dirname, "./src/views"),
+      "@store": resolve(__dirname, "./src/store"),
+      "@router": resolve(__dirname, "./src/router"),
+      "@utils": resolve(__dirname, "./src/utils"),
+      "@api": resolve(__dirname, "./src/api"),
+      "@mixins": resolve(__dirname, "./src/mixins"),
+      "@plugins": resolve(__dirname, "./src/plugins"),
+      "@styles": resolve(__dirname, "./src/styles"),
     },
   },
 
